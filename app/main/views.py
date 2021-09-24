@@ -12,7 +12,7 @@ def index():
     technology = Pitch.query.filter_by(category = 'Technology').all() 
     health = Pitch.query.filter_by(category = 'Health').all()
     education = Pitch.query.filter_by(category = 'Education').all()
-    return render_template('index.html', education = education,technology = technology, pitches = pitches,education= education)
+    return render_template('index.html', education = education,technology = technology, pitches = pitches)
 
 @main.route('/create_new', methods = ['POST','GET'])
 @login_required
