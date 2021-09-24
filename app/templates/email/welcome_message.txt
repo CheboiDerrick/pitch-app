@@ -1,0 +1,3 @@
+Hello {{user.username}}
+Welcome to Flash Pitch
+Thank you.
