@@ -15,6 +15,7 @@ flask-wtf = "*"
 email-validator = "*"
 psycopg2-binary = "*"
 flask-mail = "*"
+flask-uploads = "*"
 
 [dev-packages]
 
