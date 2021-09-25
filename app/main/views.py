@@ -9,10 +9,12 @@ from .. import db,photos
 @main.route('/')
 def index():
     pitches = Pitch.query.all()
-    technology = Pitch.query.filter_by(category = 'Technology').all() 
+    technology = Pitch.query.filter_by(category="Technology").all() 
+    print(technology)
     health = Pitch.query.filter_by(category = 'Health').all()
     education = Pitch.query.filter_by(category = 'Education').all()
-    return render_template('index.html', education = education,technology = technology, pitches = pitches)
+    title='Flash Pitch'
+    return render_template('index.html', education = education,technology = technology, pitches = pitches, health=health, title=title)
 
 @main.route('/create_new', methods = ['POST','GET'])
 @login_required

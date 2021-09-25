@@ -1,4 +1,5 @@
-<nav class="navbar navbar-expand-lg navbar-light">
+
+<nav class="navbar navbar-expand-lg mb-3">
     <div class="container-fluid">
       <a class="navbar-brand" href="{{url_for('main.index')}}"><strong>Flash Pitch</strong></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -16,14 +17,14 @@
                 {% endif %}
             </ul>
 
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-2">
                 {% if current_user.is_authenticated %}
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fas fa-user"></i>&nbsp;<strong>{{current_user.username}}</strong> </a>
-                        <div class="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">
-                            <a class="dropdown-item" href="{{url_for('main.profile',name=current_user.username)}}"><i class="far fa-user"></i>&nbsp; My account</a>
-                            <a class="dropdown-item" href="{{url_for('auth.logout')}}"><i class="fas fa-sign-out-alt"></i>&nbsp; Log out</a>
+                        <i class="fa fa-user"></i>&nbsp;<strong>{{current_user.username}}</strong> </a>
+                        <div class="dropdown-menu dropdown-menu-right dropdown-info me-3" aria-labelledby="navbarDropdownMenuLink-4">
+                            <a class="dropdown-item" href="{{url_for('main.profile',name=current_user.username)}}"><i class="fa fa-user"></i>&nbsp; My account</a>
+                            <a class="dropdown-item" href="{{url_for('auth.logout')}}"><i class="fa fa-sign-out"></i>&nbsp; Log out</a>
                         </div>
                 </li>
                 {% else %}
