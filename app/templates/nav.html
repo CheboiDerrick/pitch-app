@@ -10,6 +10,16 @@
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page"  href="{{url_for('main.index')}}">All Pitches</a>
                 </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Categories
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="/pitches/Technology">Technology</a></li>
+                      <li><a class="dropdown-item" href="/pitches/Health">Health</a></li>
+                      <li><a class="dropdown-item" href="/pitches/Education">Education</a></li>
+                    </ul>
+                  </li>
                 {% if current_user.is_authenticated %}
                 <li class="nav-item">
                     <a class="nav-link" href="{{url_for('main.new_pitch')}}">New Pitch</a>
@@ -29,10 +39,10 @@
                 </li>
                 {% else %}
                 <li class="nav-item">
-                    <a  class="nav-link" href="{{url_for('auth.login')}}" style= 'margin-right:30px'><i class="fas fa-sign-in-alt"></i>&nbsp; <strong>Log In</strong></a>
+                    <a  class="nav-link" href="{{url_for('auth.login')}}" style= 'margin-right:30px'><i class="fa fa-sign-in"></i>&nbsp; <strong>Log In</strong></a>
                 </li>
                 <li class="nav-item">
-                        <a style= 'margin-right:30px' class="nav-link" href="{{url_for('auth.register')}}"><i class="fas fa-user-plus"></i>&nbsp; <strong>Sign Up</strong></a>
+                        <a style= 'margin-right:30px' class="nav-link" href="{{url_for('auth.register')}}"><i class="fa fa-user-plus"></i>&nbsp; <strong>Sign Up</strong></a>
                 </li>
                 {%endif%}
             </ul>

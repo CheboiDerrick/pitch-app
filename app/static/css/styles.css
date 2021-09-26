@@ -30,6 +30,14 @@ body {
   color: #2f3d45;
 }
 
+.navbar-toggle {
+  border:2px solid white;
+}
+
+.navbar-toggler-icon {
+  color: #2f3d45;
+}
+
 .dropdown-menu {
   background-color: #63c342;
 }
@@ -65,7 +73,9 @@ body {
 }
 
 #create-pitch,
-#coms, #posts, #user {
+#coms,
+#posts,
+#user {
   color: white;
 }
 
@@ -78,6 +88,6 @@ body {
   font-size: 1.2rem;
 }
 
-label{
+label {
   color: white;
 }

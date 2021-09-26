@@ -16,6 +16,13 @@ def index():
     title='Flash Pitch'
     return render_template('index.html', education = education,technology = technology, pitches = pitches, health=health, title=title)
 
+
+@main.route('/pitches/<category_name>')
+def category(category_name):
+    category = Pitch.query.filter_by(category=category_name).all() 
+    title=f'{category_name} Pitches'
+    return render_template('category.html', category = category, title=title, category_name=category_name)
+
 @main.route('/create_new', methods = ['POST','GET'])
 @login_required
 def new_pitch():
